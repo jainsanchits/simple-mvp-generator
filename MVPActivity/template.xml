@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<template
+    format="1"
+    revision="2"
+    name="MVP with Activity as a view"
+    description="Creates a new view, presenter and model."
+    minApi="4">
+
+    <category value="MVP Components" />
+
+    <parameter
+        id="className"
+        name="Functionality Name"
+        type="string"
+        constraints="class|unique|nonempty"
+        default="MVPFunction"
+        help="The name of the functionality as per it's context." />
+
+    <globals file="globals.xml.ftl" />
+    <execute file="recipe.xml.ftl" />
+</template>
