@@ -46,4 +46,4 @@
 
 ## Caveats - 
 
-* Android Studio tends to delete custom templates (like in our case) during an update. When this happens, you'll need to copy **MVPActivity**, **MVPFragment** and **Base** again as per the steps above.
+* Android Studio tends to delete custom templates during an update. When this happens, you'll need to copy **MVPActivity**, **MVPFragment** and **Base** again as per the steps above.
