@@ -1,13 +1,11 @@
 # README #
 
-### This repo is WIP ###
-
 ### What is this repository for? ###
 
 * This is an MVP boiler-plate code generator for Android. The intention is to templatize every bit of code that is otherwise a redundant effort.
 * v1
 
-### How do I get set up? ###
+### How to set up? ###
 
 *To begin with, make sure Android Studio is closed (you can skip this and continue with the following steps, but Android studio is required to be restarted to see/ use the new templates).* 
 
@@ -15,7 +13,7 @@
 
 ### Motivation ###
 
-* This generator is designed to work with https://github.com/sockeqwe/AdapterDelegates - It's an immensely useful pattern by Hannes Dorfmann. Although this genrator will work with any variant of MVP.
+* This generator is compatible with https://github.com/sockeqwe/AdapterDelegates - It's an immensely useful pattern (for RecyclerViews) by Hannes Dorfmann. It's not rigid though, the template will also work with any variant of MVP.
 
 # On Mac OSX:
 
