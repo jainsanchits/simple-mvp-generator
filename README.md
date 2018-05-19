@@ -4,33 +4,48 @@
 
 ### What is this repository for? ###
 
-* Boiler-plate code generator for Android. The intention is to templatize every bit of code that is otherwise a redundant effort.
+* This is an MVP boiler-plate code generator for Android. The intention is to templatize every bit of code that is otherwise a redundant effort.
 * v1
 
 ### How do I get set up? ###
 
 *To begin with, make sure Android Studio is closed (you can skip this and continue with the following steps, but Android studio is required to be restarted to see/ use the new templates).* 
 
-*Also make sure to add Recyclerview as a dependency in the Gradle*
+*Also make sure to add Recyclerview as a dependency in Gradle*
+
+### Motivation ###
+
+* This generator is designed to work with https://github.com/sockeqwe/AdapterDelegates - It's an immensely useful pattern by Hannes Dorfmann. Although this genrator will work with any variant of MVP.
 
 # On Mac OSX:
 
 * Clone the repo,
-* Copy and paste **MVPActivity** and **Base** to **/Applications/Android Studio.app/Contents/plugins/android/lib/templates/other/**,
+* Copy and paste **MVPActivity**, **MVPFragment** and **Base** folders to **/Applications/Android Studio.app/Contents/plugins/android/lib/templates/other/**,
 * Open Android Studio > File > New
 * You should now see options to pick MVP Components and Base files 
-* In case of **MVPActivity** set the name according to your feature/ module name,
+* In case of **MVPActivity** and **MVPFragment** set the name according to your feature/ module name,
 * That's it! 
 
 # On Windows: 
 
 * Clone the repo,
-* Copy and paste **MVPActivity** and **Base** to **{ANDROID_STUDIO_LOCATION}/plugins/android/lib/templates/other/**,
+* Copy and paste **MVPActivity**, **MVPFragment** and **Base** folders to **{ANDROID_STUDIO_LOCATION}/plugins/android/lib/templates/other/**,
 * Open Android Studio > File > New
 * You should now see options to pick MVP Components and Base files 
-* In case of **MVPActivity** set the name according to your feature/ module name,
-* That's it! 
+* In case of  **MVPActivity** and **MVPFragment** set the name according to your feature/ module name,
+* That's it!
+
+## Extra features -
+
+* The onDestroy() life cycle method triggers a function to attempt and cancel any ongoing network requests. This is useful to prevent memory leaks after view death.
+* Contains bare-bone functions to make an API call, notifying data set changes and dismissing the progress indicator.
+* While generating, mention the feature name so a dedicated package is created with all class names pre-prepended with the same feature name.
+
+## What's upcoming -
+
+* Auto-register all generated Activities in the manifest.
+* Auto-create the layout XML.
 
 ## Caveats - 
 
-* Android Studio tends to delete custom templates (like in our case) while updating the IDE. When this happens, you'll have to copy **MVPActivity** and **Base** again as per the steps above.
+* Android Studio tends to delete custom templates (like in our case) while updating the IDE. When this happens, you'll have to copy **MVPActivity**, **MVPFragment** and **Base** again as per the steps above.
