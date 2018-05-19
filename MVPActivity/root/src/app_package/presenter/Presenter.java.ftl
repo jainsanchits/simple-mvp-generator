@@ -10,6 +10,8 @@ import android.view.ViewGroup;
 
 import ${packageName}.${className}Main;
 
+import ${packageName}.base.ErrorPresenter;
+
 import java.util.List;
 
 /**

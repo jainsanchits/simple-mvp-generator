@@ -65,7 +65,6 @@ public class ${className}Fragment extends Fragment implements ${className}Main.P
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         // rootView =  inflater.inflate(R.layout.your_fragment_layout, container, false);
-        ButterKnife.bind(this, rootView);
         return rootView;
     }
 
@@ -79,7 +78,7 @@ public class ${className}Fragment extends Fragment implements ${className}Main.P
 
     @Override
     public Context getAppContext() {
-        return getApplicationContext();
+        return getActivityContext().getApplicationContext();
     }
 
     @Override
