@@ -33,8 +33,7 @@ It's especially made for developers who wish to get started with MVP and create 
 
 ## Other tips ##
 
-1. Call the repo (databse or network) within loadData() function of the view.
-2. 
+* Call the repo (databse or network) within loadData() function of the view using the presenter instance. 
 
 ## Extra features -
 
