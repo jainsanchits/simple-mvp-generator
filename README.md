@@ -27,7 +27,7 @@ It's especially made for developers who wish to get started with MVP and creatin
 
 1. Open Android Studio > File > New
 2. Pick Simple MVP Generator
-3. Select "Base dependencies" (once per-project) and finish. This will generate all necessary files for Simple MVP generator to work.
+3. Select "Base dependencies" (once per-project) and finish. This will generate all necessary files for Simple MVP Generator to work.
 4. As a final step, repeat step 4 and select "MVP with Activity/ Fragment as a view"
 5. Set the name of the app-feature and hit finish,
 6. Your Activity/ Fragment is now ready with it's model, view and presenter classes!
