@@ -48,4 +48,4 @@ It's especially made for developers who wish to get started with MVP and create 
 
 ## Caveats - 
 
-* Android Studio deletes custom templates (like this one) during an update. When you update, you'll have to copy-paste **MVPActivity**, **MVPFragment** and **Base** again as per the steps above again.
+* Android Studio deletes custom templates (like this one) during an update. When you update, you'll have to re-copy-paste **MVPActivity**, **MVPFragment** and **Base** as per the steps above.
