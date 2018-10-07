@@ -1,13 +1,13 @@
 # README #
 
-### What is this for? ###
+### What is this? ###
 
 * This is a custom Android Studio template that creates an Activity or Fragment using a passive MVP pattern.
 * v1.1
 
 ### Motivation ###
 
-It's especially made for developers who wish to get started with MVP and creating more organised and testable code.
+It's especially made for developers who wish to get started with MVP and creating more organised and testable code. Specify the feature name and the generator automatically creates view, presenter and model classes neatly in dedicated packages. 
 
 ### How to set up? ###
 
