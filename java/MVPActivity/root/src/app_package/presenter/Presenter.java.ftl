@@ -1,0 +1,67 @@
+package ${packageName}.presenter;
+
+import android.content.Context;
+import android.graphics.Canvas;
+import android.graphics.Rect;
+import android.graphics.drawable.Drawable;
+import android.support.v7.widget.RecyclerView;
+import android.view.View;
+import android.view.ViewGroup;
+
+import ${packageName}.${className}Main;
+
+import ${packageName}.base.ErrorPresenter;
+
+import java.util.List;
+
+/**
+ * Created by Raj Agrawal
+ */
+public class ${className}Presenter extends ErrorPresenter<${className}Main.PresenterToView> implements ${className}Main.ModelToPresenter, ${className}Main.ViewToPresenter {
+
+    private ${className}Main.PresenterToModel model;
+
+    public ${className}Presenter(${className}Main.PresenterToView view) {
+        super(view);
+    }
+
+    @Override
+    public Context getAppContext() {
+        return getView().getAppContext();
+    }
+
+    @Override
+    public Context getActivityContext() {
+        return getView().getActivityContext();
+    }
+
+    @Override
+    public void setView(${className}Main.PresenterToView view) {
+        super.setView(view);
+    }
+
+    @Override
+    public void showProgressIndicator(boolean show) {
+        if(getView()!=null) getView().showProgressIndicator(show);
+    }
+
+    @Override
+    public void setModel(${className}Main.PresenterToModel model) {
+        this.model = model;
+    }
+
+    @Override
+    public void loadData() {
+        model.loadData();
+    }
+
+    @Override
+    public void onDestroy(){
+        model.onDestroy();
+    }
+
+    @Override
+    public void notifyDataSetChanged(){
+        getView().notifyDataSetChanged();
+    }
+}

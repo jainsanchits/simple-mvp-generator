@@ -1,49 +1,50 @@
 # README #
 
-### What is this repository for? ###
+### What is this for? ###
 
-* This is an MVP boiler-plate code generator for Android. The intention is to templatize every bit of code that is otherwise a redundant effort.
-* v1
-
-### How to set up? ###
-
-*To begin with, make sure Android Studio is closed (you can skip this and continue with the following steps, but Android studio is required to be restarted to see/ use the new templates).* 
-
-*Also make sure to add Recyclerview as a dependency in Gradle*
+* This is a custom Android Studio template that creates an Activity or Fragment using a passive MVP pattern, using Kotlin or Java.
+* v1.1
 
 ### Motivation ###
 
-* This generator is compatible with https://github.com/sockeqwe/AdapterDelegates - It's an immensely useful pattern (for RecyclerViews) by Hannes Dorfmann. It's not rigid though, the template will also work with any variant of MVP.
+It's especially made for developers who wish to get started with having more organised and testable code.
+
+### How to set up? ###
+
+*To begin with, make sure Android Studio is closed.* 
 
 # On Mac OSX:
 
-* Clone the repo,
-* Copy and paste **MVPActivity**, **MVPFragment** and **Base** folders to **/Applications/Android Studio.app/Contents/plugins/android/lib/templates/other/**,
-* Open Android Studio > File > New
-* You should now see options to pick MVP Components and Base files 
-* In case of **MVPActivity** and **MVPFragment** set the name according to your feature/ module name,
-* That's it! 
+1. Clone the repo,
+2. Pick the java or a kotlin folder, copy and paste **MVPActivity**, **MVPFragment** and **Base** folders into **/Applications/Android Studio.app/Contents/plugins/android/lib/templates/other/**,
+3. Open Android Studio > File > New
+4. Pick Simple MVP Generator
+5. Select "Base dependencies" (once per-project) and finish. This will generate all necessary files for Simple MVP generator to work.
+6. As a final step, repeat step 4 and select "MVP with Activity/ Fragment as a view"
+7. Set the name of the app-feature and hit finish,
+8. Your Activity/ Fragment is now ready with it's model, view and presenter classes!
 
 # On Windows: 
 
-* Clone the repo,
-* Copy and paste **MVPActivity**, **MVPFragment** and **Base** folders to **{ANDROID_STUDIO_LOCATION}/plugins/android/lib/templates/other/**,
-* Open Android Studio > File > New
-* You should now see options to pick MVP Components and Base files 
-* In case of  **MVPActivity** and **MVPFragment** set the name according to your feature/ module name,
-* That's it!
+1. Clone the repo,
+2. Pick the java or a kotlin folder, copy and paste **MVPActivity**, **MVPFragment** and **Base** folders into **{ANDROID_STUDIO_LOCATION}/plugins/android/lib/templates/other/,**,
+3. Open Android Studio > File > New
+4. Pick Simple MVP Generator
+5. Select "Base dependencies" (once per-project) and finish. This will generate all necessary files for Simple MVP generator to work.
+6. As a final step, repeat step 4 and select "MVP with Activity/ Fragment as a view"
+7. Set the name of the app-feature and hit finish,
+8. Your Activity/ Fragment is now ready with it's model, view and presenter classes! 
 
 ## Extra features -
 
-* The onDestroy() life cycle method triggers a function to attempt and cancel any ongoing network requests. This is useful to prevent memory leaks after view death.
-* Contains bare-bone functions to make an API call, notifying data set changes and dismissing the progress indicator.
-* While generating, mention the feature name so a dedicated package is created with all class names pre-prepended with the same feature name.
+* The onDestroy() life cycle method triggers a function to attempt and cancel any ongoing network requests. This is useful to avoid memory leaks after view death.
+* Contains bare-bone functions to make an API call, notifying data set changes and dismissing the progress indicator..
 
-## What's upcoming -
+## TODO -
 
 * Auto-register all generated Activities in the manifest.
 * Auto-create the layout XML.
 
 ## Caveats - 
 
-* Android Studio tends to delete custom templates during an update. When this happens, you'll need to copy **MVPActivity**, **MVPFragment** and **Base** again as per the steps above.
+* Android Studio deletes custom templates (like this one) during an update. When you update studio, you'll have  to copy-paste **MVPActivity**, **MVPFragment** and **Base** again as per the steps above.

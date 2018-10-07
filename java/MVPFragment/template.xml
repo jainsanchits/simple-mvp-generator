@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<template
+    format="1"
+    revision="2"
+    name="MVP with Fragment as a view"
+    description="Creates a view, presenter and model."
+    minApi="1">
+
+    <category value="Simple MVP Generator" />
+
+    <parameter
+        id="className"
+        name="Feature Name"
+        type="string"
+        constraints="class|unique|nonempty"
+        default="AwesomeFeature"
+        help="Generated classe names will be prepended with this."  />
+
+    <globals file="globals.xml.ftl" />
+    <execute file="recipe.xml.ftl" />
+</template>
