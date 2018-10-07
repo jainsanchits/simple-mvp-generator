@@ -7,7 +7,7 @@
 
 ### Motivation ###
 
-It's especially made for developers who wish to get started with having more organised and testable code.
+It's especially made for developers who wish to get started with MVP and creating more organised and testable code.
 
 ### How to set up? ###
 
@@ -16,24 +16,21 @@ It's especially made for developers who wish to get started with having more org
 # On Mac OSX:
 
 1. Clone the repo,
-2. Pick the java or a kotlin folder, copy and paste **MVPActivity**, **MVPFragment** and **Base** folders into **/Applications/Android Studio.app/Contents/plugins/android/lib/templates/other/**,
-3. Open Android Studio > File > New
-4. Pick Simple MVP Generator
-5. Select "Base dependencies" (once per-project) and finish. This will generate all necessary files for Simple MVP generator to work.
-6. As a final step, repeat step 4 and select "MVP with Activity/ Fragment as a view"
-7. Set the name of the app-feature and hit finish,
-8. Your Activity/ Fragment is now ready with it's model, view and presenter classes!
+2. Pick java or a kotlin folder as per your project requirement, copy and paste **MVPActivity**, **MVPFragment** and **Base** folders into **/Applications/Android Studio.app/Contents/plugins/android/lib/templates/other/**.
 
 # On Windows: 
 
 1. Clone the repo,
-2. Pick the java or a kotlin folder, copy and paste **MVPActivity**, **MVPFragment** and **Base** folders into **{ANDROID_STUDIO_LOCATION}/plugins/android/lib/templates/other/,**,
-3. Open Android Studio > File > New
-4. Pick Simple MVP Generator
-5. Select "Base dependencies" (once per-project) and finish. This will generate all necessary files for Simple MVP generator to work.
-6. As a final step, repeat step 4 and select "MVP with Activity/ Fragment as a view"
-7. Set the name of the app-feature and hit finish,
-8. Your Activity/ Fragment is now ready with it's model, view and presenter classes! 
+2. Pick java or a kotlin folder as per your project requirement, copy and paste **MVPActivity**, **MVPFragment** and **Base** folders into **{ANDROID_STUDIO_LOCATION}/plugins/android/lib/templates/other/**.
+
+## How to use ##
+
+1. Open Android Studio > File > New
+2. Pick Simple MVP Generator
+3. Select "Base dependencies" (once per-project) and finish. This will generate all necessary files for Simple MVP generator to work.
+4. As a final step, repeat step 4 and select "MVP with Activity/ Fragment as a view"
+5. Set the name of the app-feature and hit finish,
+6. Your Activity/ Fragment is now ready with it's model, view and presenter classes!
 
 ## Extra features -
 
