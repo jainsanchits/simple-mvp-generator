@@ -2,7 +2,7 @@
 
 ### Introduction ###
 
-* This is a custom Android Studio template that helps creating an Activity or Fragment using the passive MVP pattern.
+* This is a custom Android Studio template that helps creating an Activity or Fragment using the passive-view MVP pattern.
 
 ### Motivation ###
 
