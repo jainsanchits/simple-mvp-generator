@@ -29,7 +29,12 @@ It's especially made for developers who wish to get started with MVP and create 
 3. Select "Base dependencies" (once per-project) and finish. This will generate all necessary files for Simple MVP Generator to work.
 4. As a final step, repeat step 4 and select "MVP with Activity/ Fragment as a view"
 5. Set the name of the app-feature and hit finish,
-6. Your Activity/ Fragment is now ready with it's model, view and presenter classes!
+6. Your view is now ready with it's model, view and presenter classes!
+
+## Other tips ##
+
+1. Call the repo (databse or network) within loadData() function of the view.
+2. 
 
 ## Extra features -
 
@@ -43,4 +48,4 @@ It's especially made for developers who wish to get started with MVP and create 
 
 ## Caveats - 
 
-* Android Studio deletes custom templates (like this one) during an update. When you update studio, you'll have  to copy-paste **MVPActivity**, **MVPFragment** and **Base** again as per the steps above.
+* Android Studio deletes custom templates (like this one) during an update. When you update, you'll have to copy-paste **MVPActivity**, **MVPFragment** and **Base** again as per the steps above again.
