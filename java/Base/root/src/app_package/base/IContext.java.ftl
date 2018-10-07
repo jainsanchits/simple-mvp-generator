@@ -1,9 +1,5 @@
 package ${packageName}.base;
 
-import ${packageName}.base.IRecyclerBaseViewToPresenter;
-import ${packageName}.base.IContext;
-import ${packageName}.base.IShowError;
-
 import android.content.Context;
 
 /**
