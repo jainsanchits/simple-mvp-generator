@@ -26,7 +26,7 @@
 2. Pick Simple MVP Generator
 3. Select "MVP with Activity/ Fragment as a view"
 4. Set the name of the app-feature and hit finish,
-5. Your view is now ready, liked to it's model, view and presenter!
+5. Your view is now ready and linked to it's model, view and presenter!
 
 ## Extra features -
 
