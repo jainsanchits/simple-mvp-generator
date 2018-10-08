@@ -1,7 +1,5 @@
 # README #
 
-## This project is WIP ##
-
 ### Introduction ###
 
 * This is a customised Android Studio template for developers who like to take their first step moving away from non-architectural way of coding, i.e having unmanageable and harder-to-test god-objects everywhere. This template automatically creates an Activity/ Fragment using the passive-view MVP pattern.
