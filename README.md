@@ -7,7 +7,7 @@
 ### How to set up? ###
 
 * For the templates to show-up in the menu list, make sure Android Studio is closed.* 
-* Add the base depenency to your app level gradle file - 
+* Add the base depenencies to your app level gradle file (3 KB in size) - [BR]
 **implementation 'com.uberfables.library:simple_mvp_generator:1.0.0'**
 
 # On Mac OSX:
