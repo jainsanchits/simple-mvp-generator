@@ -1,14 +1,15 @@
 # README #
 
-### Introduction ###
+### Introduction and motivation ###
 
-* This is a customised Android Studio template for developers who like to take their first step moving away from non-architectural way of coding, i.e having unmanageable and harder-to-test god-objects everywhere. This template automatically creates an Activity/ Fragment using the passive-view MVP pattern.
+* This is a customised Android Studio template for developers who want to take their first step moving away from non-architectural way of coding. This template automatically creates an Activity/ Fragment using the passive-view MVP pattern.
 
 ### How to set up? ###
 
-* For the templates to show-up in the menu list, make sure Android Studio is closed.* 
-* Add the base depenencies library to your app level gradle file (3 KB in size) - 
+* Add the base depenency library to your app level gradle file (only 3 KB in size) - 
 **implementation 'com.uberfables.library:simple_mvp_generator:1.0.0'**
+
+* For the templates to show-up in Android Studio's menu list, make sure Android Studio is closed.
 
 # On Mac OSX:
 
@@ -35,9 +36,10 @@
 
 ## TODO -
 
+* Add comments as built-in tutorials.
 * Auto-register all generated Activities in the manifest.
 * Auto-create the layout XML.
 
 ## Caveats - 
 
-* Android Studio deletes custom templates during an update (templates like this one that did not come with the stock installation). So when you update, setup **MVPActivity**, **MVPFragment** as per the steps above.
+* Android Studio deletes custom templates during each update. So when this happens, setup **MVPActivity**, **MVPFragment** need to be copied again as per the steps above.
