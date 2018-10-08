@@ -1,5 +1,7 @@
 # README #
 
+## This project is WIP ##
+
 ### Introduction ###
 
 * This is a custom Android Studio template that helps creating an Activity or Fragment using the passive-view MVP pattern.
@@ -11,6 +13,7 @@ It's especially made for developers who wish to get started with MVP and create 
 ### How to set up? ###
 
 *To begin with, make sure Android Studio is closed.* 
+* WIP - Add the base depenencies - Kotlin or Java
 
 # On Mac OSX:
 
