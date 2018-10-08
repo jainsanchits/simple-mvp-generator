@@ -2,7 +2,7 @@
 
 ### Introduction and motivation ###
 
-* This is a customised Android Studio template for developers who want to take their first step moving away from non-architectural way of coding. This template automatically creates an Activity/ Fragment using the passive-view MVP pattern.
+* This is a customised Android Studio template for developers who want to take their first step moving away from non-architectural way of coding. This template automatically creates an Activity/ Fragment using the passive-view MVP pattern. It will also act as a helper and effort saver.
 
 ### How to set up? ###
 
