@@ -2,36 +2,21 @@ package ${packageName}.model;
 
 import ${packageName}.${className}Main;
 
-import java.util.ArrayList;
-import java.util.List;
+class ${className}Model(private val mPresenter: ${className}Main.ModelToPresenter) : ${className}Main.PresenterToModel {
 
-/**
- * Created by Raj Agrawal
- */
-public class ${className}Model implements ${className}Main.PresenterToModel {
+    /**
+     * If you don't use Retrofit, initialise the list and replace "RetrofitCall" with the network call instance of your preference.
+     */
+//    private lateinit var callList: List<Call<RetrofitCall>>
 
-    private ${className}Main.ModelToPresenter mPresenter;
-
-/**
- * If you don't use Retrofit, replace "RetrofitCall" with the network call instance of your preference,
- */
-// private List<Call<RetrofitCall>> callList = new ArrayList<>();
-
-    public ${className}Model(${className}Main.ModelToPresenter presenter) {
-        this.mPresenter = presenter;
-    }
-
-    @Override
-    public void loadData() {
+    override fun loadData() {
 
     }
 
-    @Override
-    public void onDestroy(){
-
-//        for (int index = 0; index < callList.size(); index++) {
-//            if (callList.get(index) != null && !callList.get(index).isCanceled()) {
-//                callList.get(index).cancel();
+    override fun onDestroy() {
+//        for (index in 0 until callList.size) {
+//            callList[index]?.let {
+//                if(callList[index].isCanceled()) callList[index].cancel()
 //            }
 //        }
     }

@@ -1,23 +1,15 @@
 package ${packageName}.presenter;
 
 import android.content.Context;
-import android.graphics.Canvas;
-import android.graphics.Rect;
-import android.graphics.drawable.Drawable;
-import android.support.v7.widget.RecyclerView;
-import android.view.View;
-import android.view.ViewGroup;
-
-import ${packageName}.${className}Main;
-
-import ${packageName}.base.ErrorPresenter;
 
 import java.util.List;
 
-/**
- * Created by Raj Agrawal
- */
-public class ${className}Presenter extends ErrorPresenter<${className}Main.PresenterToView> implements ${className}Main.ModelToPresenter, ${className}Main.ViewToPresenter {
+import ${packageName}.${className}Main;
+
+import com.uberfables.library.simple.mvp.generator.base.java.BasePresenter;
+import com.uberfables.library.simple.mvp.generator.base.java.IShowError;
+
+public class ${className}Presenter extends BasePresenter<${className}Main.PresenterToView> implements ${className}Main.ModelToPresenter, ${className}Main.ViewToPresenter, IShowError {
 
     private ${className}Main.PresenterToModel model;
 
@@ -41,11 +33,6 @@ public class ${className}Presenter extends ErrorPresenter<${className}Main.Prese
     }
 
     @Override
-    public void showProgressIndicator(boolean show) {
-        if(getView()!=null) getView().showProgressIndicator(show);
-    }
-
-    @Override
     public void setModel(${className}Main.PresenterToModel model) {
         this.model = model;
     }
@@ -56,12 +43,22 @@ public class ${className}Presenter extends ErrorPresenter<${className}Main.Prese
     }
 
     @Override
-    public void onDestroy(){
+    public void onDestroy() {
         model.onDestroy();
     }
 
     @Override
-    public void notifyDataSetChanged(){
+    public void notifyDataSetChanged() {
         getView().notifyDataSetChanged();
+    }
+
+    @Override
+    public void onDataLoaded(List list) {
+        getView().onDataLoaded(list);
+    }
+
+    @Override
+    public void onError(String message) {
+        getView().onError(message);
     }
 }

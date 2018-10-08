@@ -1,36 +1,22 @@
-package ${packageName}.presenter;
+package ${packageName}.presenter
 
-import android.content.Context;
-import android.graphics.Canvas;
-import android.graphics.Rect;
-import android.graphics.drawable.Drawable;
-import android.support.v7.widget.RecyclerView;
-import android.view.View;
-import android.view.ViewGroup;
+import android.content.Context
 
-import ${packageName}.base.ErrorPresenter;
-import ${packageName}.${className}Main;
+import ${packageName}.${className}Main
 
-import java.util.List;
+import com.uberfables.library.simple.mvp.generator.base.kotlin.BasePresenter
+import com.uberfables.library.simple.mvp.generator.base.kotlin.IShowError
 
-/**
- * Created by Raj Agrawal
- */
-class ${className}Presenter(view: ${className}Main.PresenterToView) : ErrorPresenter<${className}Main.PresenterToView>(view), ${className}Main.ModelToPresenter, ${className}Main.ViewToPresenter {
-    override fun setView(viewInstance: ${className}Main.PresenterToView) {
-        view = viewInstance
-    }
-
-    private var model: ${className}Main.PresenterToModel? = null
-
+class ${className}Presenter(view: ${className}Main.PresenterToView) : BasePresenter<${className}Main.PresenterToView>(view), ${className}Main.ModelToPresenter, ${className}Main.ViewToPresenter, IShowError {
     override val appContext: Context?
         get() = view?.appContext
-
     override val activityContext: Context?
         get() = view?.activityContext
 
-    override fun showProgressIndicator(show: Boolean) {
-        if (view != null) view?.showProgressIndicator(show)
+    private lateinit var model: ${className}Main.PresenterToModel
+
+    override fun setView(view: ${className}Main.PresenterToView) {
+        super.view = view
     }
 
     override fun setModel(model: ${className}Main.PresenterToModel) {
@@ -38,14 +24,22 @@ class ${className}Presenter(view: ${className}Main.PresenterToView) : ErrorPrese
     }
 
     override fun loadData() {
-        model?.loadData()
+        model.loadData()
     }
 
     override fun onDestroy() {
-        model?.onDestroy()
+        model.onDestroy()
     }
 
     override fun notifyDataSetChanged() {
         view?.notifyDataSetChanged()
+    }
+
+    override fun onDataLoaded(list: List<*>) {
+        view?.onDataLoaded(list)
+    }
+
+    override fun onError(message: String) {
+        view?.onError(message)
     }
 }

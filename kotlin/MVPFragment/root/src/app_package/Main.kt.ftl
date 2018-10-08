@@ -1,23 +1,19 @@
-package ${packageName};
+package ${packageName}
 
-import ${packageName}.base.IContext;
-import ${packageName}.base.IShowError;
+import com.uberfables.library.simple.mvp.generator.base.kotlin.IContext
+import com.uberfables.library.simple.mvp.generator.base.kotlin.IShowError
 
-/**
- * Created by Raj Agrawal
- */
 interface ${className}Main {
 
     interface ModelToPresenter : IContext, IShowError {
-        fun showProgressIndicator(show: Boolean)
-
         fun notifyDataSetChanged()
+        fun onDataLoaded(list: List<*>)
     }
 
     interface ViewToPresenter {
         fun setModel(model: ${className}Main.PresenterToModel)
 
-        fun setView(viewInstance: ${className}Main.PresenterToView)
+        fun setView(view: ${className}Main.PresenterToView)
 
         fun loadData()
 
@@ -25,9 +21,9 @@ interface ${className}Main {
     }
 
     interface PresenterToView : IContext {
-        fun showProgressIndicator(show: Boolean)
-
         fun notifyDataSetChanged()
+        fun onError(message: String)
+        fun onDataLoaded(list: List<*>)
     }
 
     interface PresenterToModel {

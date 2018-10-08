@@ -1,66 +1,51 @@
 package ${packageName}.presenter;
 
 import android.content.Context;
-import android.graphics.Canvas;
-import android.graphics.Rect;
-import android.graphics.drawable.Drawable;
-import android.support.v7.widget.RecyclerView;
-import android.view.View;
-import android.view.ViewGroup;
-
-import ${packageName}.base.ErrorPresenter;
-import ${packageName}.${className}Main;
 
 import java.util.List;
 
-/**
- * Created by Raj Agrawal
- */
-public class ${className}Presenter extends ErrorPresenter<${className}Main.PresenterToView> implements ${className}Main.ModelToPresenter, ${className}Main.ViewToPresenter {
+import ${packageName}.${className}Main;
 
-    private ${className}Main.PresenterToModel model;
+import com.uberfables.library.simple.mvp.generator.base.kotlin.BasePresenter
+import com.uberfables.library.simple.mvp.generator.base.kotlin.IShowError
 
-    public ${className}Presenter(${className}Main.PresenterToView view) {
-        super(view);
+class ${className}Presenter(view: ${className}Main.PresenterToView) : BasePresenter<${className}Main.PresenterToView>(view), ${className}Main.ModelToPresenter, ${className}Main.ViewToPresenter, IShowError {
+
+    private lateinit var model: ${className}Main.PresenterToModel
+
+    override fun getAppContext(): Context? {
+        return view?.appContext
     }
 
-    @Override
-    public Context getAppContext() {
-        return getView().getAppContext();
+    override fun getActivityContext(): Context? {
+        return view?.activityContext
     }
 
-    @Override
-    public Context getActivityContext() {
-        return getView().getActivityContext();
+    override fun setView(view: ${className}Main.PresenterToView) {
+        super.view = view
+    }
+    
+    override fun setModel(model: ${className}Main.PresenterToModel) {
+        this.model = model
     }
 
-    @Override
-    public void setView(${className}Main.PresenterToView view) {
-        super.setView(view);
+    override fun loadData() {
+        model.loadData()
     }
 
-    @Override
-    public void showProgressIndicator(boolean show) {
-        if(getView()!=null) getView().showProgressIndicator(show);
+    override fun onDestroy() {
+        model.onDestroy()
     }
 
-    @Override
-    public void setModel(${className}Main.PresenterToModel model) {
-        this.model = model;
+    override fun notifyDataSetChanged() {
+        view?.notifyDataSetChanged()
     }
 
-    @Override
-    public void loadData() {
-        model.loadData();
+    override fun onDataLoaded(list: List<*>) {
+        view?.onDataLoaded(list)
     }
 
-    @Override
-    public void onDestroy(){
-        model.onDestroy();
-    }
-
-    @Override
-    public void notifyDataSetChanged(){
-        getView().notifyDataSetChanged();
+    override fun onError(message: String) {
+        view?.onError(message)
     }
 }

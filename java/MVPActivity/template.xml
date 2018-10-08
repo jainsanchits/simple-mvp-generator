@@ -3,7 +3,7 @@
     format="1"
     revision="2"
     name="MVP with Activity as a view"
-    description="Creates a new view, presenter and model."
+    description="Creates a new batch of view, presenter and model."
     minApi="1">
 
     <category value="Simple MVP Generator" />

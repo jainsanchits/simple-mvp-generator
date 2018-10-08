@@ -1,16 +1,15 @@
 package ${packageName};
 
-import ${packageName}.base.IContext;
-import ${packageName}.base.IShowError;
+import java.util.List;
 
-/**
- * Created by Raj Agrawal
- */
+import com.uberfables.library.simple.mvp.generator.base.java.IContext;
+import com.uberfables.library.simple.mvp.generator.base.java.IShowError;
+
 public interface ${className}Main {
 
     interface ModelToPresenter extends IContext, IShowError {
-        void showProgressIndicator(boolean show);
         void notifyDataSetChanged();
+        void onDataLoaded(List list);
     }
 
     interface ViewToPresenter {
@@ -24,8 +23,9 @@ public interface ${className}Main {
     }
 
     interface PresenterToView extends IContext {
-        void showProgressIndicator(boolean show);
         void notifyDataSetChanged();
+        void onError(String message);
+        void onDataLoaded(List list);
     }
 
     interface PresenterToModel {

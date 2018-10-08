@@ -1,27 +1,21 @@
-package ${packageName}.view;
+package ${packageName}.view
 
-import android.app.Activity;
-import android.content.Context;
-import android.os.Bundle;
-import android.view.View;
-import android.content.Intent;
+import android.app.Activity
+import android.content.Context
+import android.os.Bundle
+import android.content.Intent
 
-import ${packageName}.${className}Main;
-import ${packageName}.model.${className}Model;
-import ${packageName}.presenter.${className}Presenter;
+import ${packageName}.${className}Main
+import ${packageName}.model.${className}Model
+import ${packageName}.presenter.${className}Presenter
 
-/**
- * Created by Raj Agrawal
- */
 class ${className}Activity : Activity(), ${className}Main.PresenterToView {
+    override val appContext: Context?
+        get() = this.applicationContext
+    override val activityContext: Context?
+        get() = this
 
     private var mPresenter: ${className}Main.ViewToPresenter? = null
-
-    override val appContext: Context
-        get() = applicationContext
-
-    override val activityContext: Context
-        get() = this
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -42,10 +36,18 @@ class ${className}Activity : Activity(), ${className}Main.PresenterToView {
     }
 
     private fun loadData() {
+        mPresenter?.loadData()
+    }
+
+    override fun onError(message: String) {
+        // show a dialog-box or anything that indicates error to the user, along with the message.
+    }
+
+    override fun onDataLoaded(list: List<*>) {
 
     }
 
-    override fun showProgressIndicator(show: Boolean) {
+    private fun showProgressIndicator(show: Boolean) {
         if (show) {
 
         } else {
@@ -58,12 +60,11 @@ class ${className}Activity : Activity(), ${className}Main.PresenterToView {
     }
 
     public override fun onDestroy() {
-        mPresenter!!.onDestroy()
+        mPresenter?.onDestroy()
         super.onDestroy()
     }
 
     companion object {
-
         fun getIntent(context: Context): Intent {
             return Intent(context, ${className}Activity::class.java)
         }

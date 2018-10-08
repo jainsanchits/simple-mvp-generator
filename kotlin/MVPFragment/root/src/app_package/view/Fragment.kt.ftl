@@ -1,22 +1,16 @@
 package ${packageName}.view;
 
-import android.content.Context;
-import android.os.Bundle;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
+import android.content.Context
+import android.os.Bundle
+import android.support.v4.app.Fragment
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
 
-import android.support.v4.app.Fragment;
-
-import com.stylabs.styfi.app.R;
-import com.stylabs.styfi.app.StyFi;
 import ${packageName}.${className}Main;
 import ${packageName}.model.${className}Model;
 import ${packageName}.presenter.${className}Presenter;
 
-/**
- * Created by Raj Agrawal
- */
 class ${className}Fragment : Fragment(), ${className}Main.PresenterToView {
 
     override val appContext: Context?
@@ -45,6 +39,23 @@ class ${className}Fragment : Fragment(), ${className}Main.PresenterToView {
         return rootView
     }
 
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        loadData()
+    }
+
+    private fun loadData() {
+        mPresenter?.loadData()
+    }
+
+    override fun onError(message: String) {
+        // show a dialog-box or anything that indicates error to the user, along with the message.
+    }
+
+    override fun onDataLoaded(list: List<*>) {
+
+    }
+
     private fun setupMVP() {
         val presenter = ${className}Presenter(this)
         val model = ${className}Model(presenter)
@@ -53,7 +64,7 @@ class ${className}Fragment : Fragment(), ${className}Main.PresenterToView {
         mPresenter?.setView(this)
     }
 
-    override fun showProgressIndicator(show: Boolean) {
+    private fun showProgressIndicator(show: Boolean) {
         if (show) {
 
         } else {
